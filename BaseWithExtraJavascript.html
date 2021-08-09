@@ -11,11 +11,6 @@
             padding: 0;
         }
 
-        /* applies to every sibling */
-        *+* {
-            margin-top: 1em;
-        }
-
         /* basically only used for background image */
         body {
             background-image: url(LocalBackgroundImage.jpg);
@@ -42,6 +37,11 @@
             left: 3%;
             top: 1%;
         }
+		
+		/* prevents last elements bottom being flush with page end */
+		.main > *:last-child {
+			margin-bottom: 1em;
+		}
 
         /* apply if margin should be skipped */
         .skip {
@@ -62,7 +62,7 @@
         }
 
         /* applies to first elemnt in .row */
-        .rows > *:first-child {
+        .rows > * {
             margin-top: 1em;
         }
 
@@ -152,35 +152,35 @@
             <buton id="reset">Press here to reset<br>
 								the disable</button>
         </div>
-        <div name="name1" class="rows boxStyleType1 skip" id="exampleRow">
+        <div name="name1" class="rows boxStyleType1" id="exampleRow">
             <button id="btn1">1</button>
             <button id="btn2">2</button>
             <button id="btn3">&#9999;</button>
             <button id="btn4">4</button>
         </div>
-        <div name="disBtn1" class="rows boxStyleType1 skip void">
+        <div name="disBtn1" class="rows boxStyleType1 void">
             <div class="width60">Lone</div>
         </div>
-        <div name="disBtn1" class="rows boxStyleType1 skip void">
+        <div name="disBtn1" class="rows boxStyleType1 void">
             <div class="width80">1</div>
             <div>2</div>
         </div>
-        <div name="disBtn1" class="rows boxStyleType1 skip void">
+        <div name="disBtn1" class="rows boxStyleType1 void">
             <div class="width50">1</div>
             <div>2</div>
         </div>
-        <div name="disBtn1" class="rows boxStyleType1 skip void">
+        <div name="disBtn1" class="rows boxStyleType1 void">
             <div class="width50">1</div>
             <div>2</div>
             <div>3</div>
         </div>
-        <div name="disBtn2" class="rows boxStyleType1 skip void">
+        <div name="disBtn2" class="rows boxStyleType1 void">
             <div class="width60">A double</div>
         </div>
-        <div name="disBtn3" class="rows boxStyleType1 skip void">
+        <div name="disBtn3" class="rows boxStyleType1 void">
             <div class="width60">The pen is mightier than the sword</div>
         </div>
-        <div name="disBtn4" class="rows boxStyleType1 skip void">
+        <div name="disBtn4" class="rows boxStyleType1 void">
             <div class="width60">Fore</div>
         </div>
     </div>
