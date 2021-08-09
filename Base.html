@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* applies to everything */
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* applies to every sibling */
+        *+* {
+            margin-top: 1em;
+        }
+
+        /* basically only used for background image */
+        body {
+            background-image: url(LocalBackgroundImage.jpg);
+            background-color: #000000;
+        }
+
+        /* main div, 2nd body */
+        .main {
+            position: absolute;
+            width: 94%;
+            left: 3%;
+            top: 1%;
+        }
+
+        /* apply if margin should be skipped */
+        .skip {
+            margin-top: 0;
+        }
+
+        /* removes margin from line breaks */
+        br {
+            margin: 0;
+        }
+
+        /* styles text in p brackets */
+        p {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 0;
+        }
+
+
+        /* class used on the div containin the entries*/
+        .rows {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* sets the width of the elemnts inside a row */
+        .rows>* {
+            width: 100%;
+            margin-right: 2%
+        }
+
+        /* applies to first elemnt in row */
+        .rows>*:first-child {
+            margin-top: 1em;
+        }
+
+        /* applies to last element in row */
+        .rows>*:last-child {
+            margin-right: 0;
+        }
+
+        /* class used to toggle display of elements */
+        .void {
+            display: none;
+        }
+
+        /* sets a minimum height, just used for images */
+        .minHeight {
+            min-height: 300px;
+        }
+
+
+        /* example class used to style the div boxes */
+        .boxStyleType1>* {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1.5%;
+            background-color: #cccccc;
+        }
+
+        /* these can be used to shrink the size of an element in a row */
+        .width50 {
+            width: 50%;
+        }
+        .width60 {
+            width: 60%;
+        }
+        .width70 {
+            width: 70%;
+        }
+        .width80 {
+            width: 80%;
+        }
+
+
+        /* These style all tables */
+        td {
+            width: 300px;
+            border: 2px solid black;
+            padding: 6px;
+            font-size: 23px
+        }
+
+        td:empty {
+            background-color: #00000000;
+            border: none;
+        }
+        tr:nth-child(even) {
+            background-color: #e6c6b3ed;
+        }
+        tr:nth-child(odd) {
+            background-color: #ecd8c6ed;
+        }
+
+
+        /* basic classes that change bg colours */
+        .c1 {
+            background-color: #88888888;
+        }
+
+        .c2 {
+            background-color: #00000000;
+        }
+
+        .c3 {
+            background-color: green;
+        }
+
+
+        /* example class for linking a background image */
+        .bExample {
+            background-image: url(Example.png);
+        }
+    </style>
+    <title>Example Title</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="rows boxStyleType1 skip">
+            <div class="width60">Lone</div>
+        </div>
+		    <div class="rows boxStyleType1 skip">
+            <div class="width80">1</div>
+            <div>2</div>
+        </div>
+        <div class="rows boxStyleType1 skip">
+            <div class="width50">1</div>
+            <div>2</div>
+        </div>
+        <div class="rows boxStyleType1 skip">
+            <div class="width50">1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+</body>
